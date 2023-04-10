@@ -105,12 +105,18 @@ LANDING PAGE
 
 .header {
     position: absolute;
-    top: 5%;
-    right: 10%;
-    transform: translate(-50, -50);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     max-width: 1000px;
     padding: 0 30px;
+}
+
+.title__blue {
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: 1;
 }
 
 .blue {
@@ -140,6 +146,7 @@ LANDING PAGE
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
 }
 
 .mail__btn {
@@ -394,6 +401,7 @@ nav {
 #personal-logo {
     width: 50px;
     height: 50px;
+    filter: inverter(0)
 }
 
 
@@ -690,7 +698,7 @@ width = 80vw
 
 @media (max-width: 768px) {
     .title {
-        font-size: 80px;
+        font-size: 50px;
     }
     .header__para {
         font-size: 20px;
@@ -711,8 +719,8 @@ width = 80vw
 
 /* Small phones */
 @media (max-width: 480px) {
-    .title {
-        font-size: 52px;
+    .title{
+        font-size: 30px;
     }
     .header__para {
         font-size: 18px;
@@ -736,3 +744,24 @@ width = 80vw
         padding: 40px;
     }
 }
+
+/* ADDED AFTER TUTORIAL */
+.footer__logo--popper {
+    position: absolute;
+    right: 0;
+    top: 16px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 300ms ease;
+    color: white;
+  }
+  
+  .footer__anchor {
+    position: relative;
+  }
+  
+  .footer__anchor:hover .footer__logo--popper {
+    transform: translateX(60px);
+    opacity: 1;
+  }
+  
